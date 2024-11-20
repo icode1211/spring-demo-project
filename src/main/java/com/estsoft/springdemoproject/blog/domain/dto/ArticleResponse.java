@@ -33,7 +33,7 @@ public class ArticleResponse {
         id = article.getId();
         title = article.getTitle();
         content = article.getContent();
-        createdAt = article.getCreatedAt().format(formatter);
-        updatedAt = article.getUpdatedAt().format(formatter);
+        createdAt = article.getCreatedAt() != null ? article.getCreatedAt().format(formatter) : "";
+        updatedAt = article.getUpdatedAt() != null ? article.getUpdatedAt().format(formatter) : "";
     }
 }
